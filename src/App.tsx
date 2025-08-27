@@ -1,34 +1,48 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import gameworksLogo from './assets/gameworks.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [studentId, setStudentId] = useState('')
+  const [password, setPassword] = useState('')
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log('Login attempt:', { studentId, password })
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="login-container">
+      <div className="login-form">
+        <div className="logo-container">
+          <img src={gameworksLogo} className="logo" alt="Flow logo" />
+          <h1 className="title">FLOW : Startup Bridge</h1>
+        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="input-group">
+            <input
+              type="number"
+              value={studentId}
+              onChange={(e) => setStudentId(e.target.value)}
+              placeholder="학번"
+              required
+            />
+          </div>
+          <div className="input-group">
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="비밀번호"
+              required
+            />
+          </div>
+          <button type="submit" className="login-btn">
+            투자 시작하기
+          </button>
+        </form>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
