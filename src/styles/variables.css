@@ -1,0 +1,78 @@
+:root {
+  /* Primary Colors */
+  --color-primary-50: #f0f6ff;
+  --color-primary-100: #e0ecff;
+  --color-primary-200: #c7dcff;
+  --color-primary-300: #a5c6fe;
+  --color-primary-400: #81a6fc;
+  --color-primary-500: #5d86f8;
+  --color-primary-600: #3576CE;
+  --color-primary-700: #2a5ba6;
+  --color-primary-800: #1f4582;
+  --color-primary-900: #1a3867;
+
+  /* Secondary Colors */
+  --color-secondary-50: #fff8f0;
+  --color-secondary-100: #ffeed9;
+  --color-secondary-200: #ffdbb3;
+  --color-secondary-300: #ffc082;
+  --color-secondary-400: #ff9f4f;
+  --color-secondary-500: #ff7f1a;
+  --color-secondary-600: #e56b00;
+  --color-secondary-700: #b85400;
+  --color-secondary-800: #8a3f00;
+  --color-secondary-900: #5c2a00;
+
+  /* Neutral Colors */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+
+  /* Semantic Colors */
+  --color-success: #059669;
+  --color-warning: #d97706;
+  --color-error: #dc2626;
+  --color-info: #3576CE;
+
+  /* Brand Colors */
+  --color-brand-primary: #3576CE;
+  --color-brand-primary-hover: #2A5BA6;
+  --color-brand-secondary: #ff7f1a;
+  --color-brand-accent: #0ea5e9;
+  --color-brand-react: #61dafb;
+
+  /* Background Colors */
+  --color-bg-light: #ffffff;
+  --color-bg-light-secondary: #f8fafc;
+  --color-bg-light-accent: #f1f5f9;
+  --color-bg-dark: #0f172a;
+  --color-bg-dark-secondary: #1e293b;
+  --color-bg-dark-accent: #334155;
+
+  /* Text Colors */
+  --color-text-light: #0f172a;
+  --color-text-light-secondary: #475569;
+  --color-text-light-muted: #64748b;
+  --color-text-dark: #f8fafc;
+  --color-text-dark-secondary: #cbd5e1;
+  --color-text-dark-muted: #94a3b8;
+
+  /* Theme-based Variables */
+  color-scheme: light dark;
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-dark);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--color-text-light);
+    background-color: var(--color-bg-light);
+  }
+}
